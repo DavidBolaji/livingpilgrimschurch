@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400;700&display=swap");
+@import "~react-image-gallery/styles/css/image-gallery.css";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oregano&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* overflow-x: hidden; */
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: sans-serif, cursive;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+span {
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-top: 8vh;
+}
+
+nav {
+  padding: 1.1rem 5rem;
+  height: 13vh;
+}
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+nav ul li {
+  text-transform: uppercase;
+  list-style-type: none;
+  margin-left: 3rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.5s ease-in;
+}
+
+nav ul li:hover {
+  color: #4dba87;
+}
+
+.carou1 {
+  background-image: linear-gradient(
+      rgba(2, 3, 2, 0.895),
+      rgba(18, 15, 15, 0.463)
+    ),
+    url("../src/assets/images/bg.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  /* background-repeat: no-repeat; */
+}
+
+.carou1 h3,
+.carou2 h3 {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  position: absolute;
+  top: -40px;
+  /* z-index: 10; */
+}
+
+.italics {
+  font-style: italic;
+  font-family: Oregan cursive;
+  font-size: 30px;
+  line-height: 1.2rem;
+}
+
+.heavy {
+  font-weight: 800;
+  font-size: 60px;
+  margin-top: -5px;
+  z-index: 10;
+}
+
+.gothic {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.carou2 {
+  background-image: linear-gradient(
+      rgba(4, 5, 11, 0.895),
+      rgba(18, 15, 15, 0.463)
+    ),
+    url("../src/assets/images/bg3.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  /* background-repeat: no-repeat; */
+}
+
+.carou3 {
+  background-image: linear-gradient(
+      rgba(4, 5, 11, 0.895),
+      rgba(18, 15, 15, 0.463)
+    ),
+    url("../src/assets/images/bg.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  /* background-repeat: no-repeat; */
+}
+
+.sillo {
+  /* height: 500px; */
+  transform: translate(240px, 300px);
+}
+
+.silloM {
+  /* height: 500px; */
+  transform: translate(700px, 20px) scale(1.3);
+}
+
+@media (max-width: 810px) {
+  .carou1,
+  .carou2,
+  .carou3 {
+    height: 40vh;
+  }
+
+  .italics {
+    font-style: italic;
+    font-family: Oregan cursive;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .heavy {
+    font-weight: 800;
+    font-size: 20px;
+    margin-top: -5px;
+  }
+
+  .carou1 h3 {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: -40px;
+    /* z-index: 10; */
+  }
+
+  .sillo {
+    transform: scale(0.4) translate(-160px, 100px);
+  }
+
+  .silloM {
+    transform: scale(0.53) translate(230px, -470px);
+  }
+}
