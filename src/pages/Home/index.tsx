@@ -23,7 +23,10 @@ const Home = () => {
         {/* <link rel="icon" href="./assets/images/dav.jpg" /> */}
         <meta
           name="description"
-          content="Living Pilgrims Pentecostal Ministry is a living church with her HQ in Kogi state, Itakpe Camp one. The general overseer is this church is Pator C.O Sillo."
+          content="  Living Pilgrims Pentecostal Ministries is a church headquartered in
+            Itakpe, Camp 1, National Iron Ore Mining Company’s Staff Quarters,
+            Kogi State, Nigeria, with Pastor Christopher Omatsola Sillo as the
+            General Overseer."
         />
         <meta charSet="UTF-8" />
         <meta name="theme-color" content="#2D2E32" />
