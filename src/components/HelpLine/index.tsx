@@ -25,7 +25,8 @@ export const StyledDrawer = styled(Drawer)`
   }
 
   .ant-drawer-close {
-    display: none;
+    /* display: none; */
+    color: white;
   }
 
   p {

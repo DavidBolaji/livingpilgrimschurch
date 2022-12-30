@@ -137,16 +137,6 @@ nav ul li:hover {
   /* background-repeat: no-repeat; */
 }
 
-.sillo {
-  /* height: 500px; */
-  transform: translate(240px, 300px);
-}
-
-.silloM {
-  /* height: 500px; */
-  transform: translate(700px, 20px) scale(1.3);
-}
-
 @media (max-width: 810px) {
   .carou1,
   .carou2,
@@ -178,13 +168,5 @@ nav ul li:hover {
     position: absolute;
     top: -40px;
     /* z-index: 10; */
-  }
-
-  .sillo {
-    transform: scale(0.4) translate(-160px, 100px);
-  }
-
-  .silloM {
-    transform: scale(0.53) translate(230px, -470px);
   }
 }

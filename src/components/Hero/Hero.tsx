@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import { Carousel } from "antd";
 import React from "react";
 import MsSillo from "../../assets/images/msillorm.png";
@@ -11,6 +12,31 @@ const contentStyle: React.CSSProperties = {
   textAlign: "center",
   background: "#364d79",
 };
+
+const StyledPicGroup = styled.div`
+  display: flex;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-35%);
+
+  img {
+    width: 35%;
+    height: 35%;
+
+  }
+
+  @media (max-width: 768px) {
+    width: 120%;
+  }
+
+  @media (max-width: 810px) {
+    width: 100%;
+  }
+`;
 
 const Hero = () => {
   return (
@@ -28,8 +54,10 @@ const Hero = () => {
             <br />
           </h3>
         </div>
+        <StyledPicGroup className="group">
         <img src={PsSillo} alt={"pastor sillo"} className="sillo" />
         <img src={MsSillo} alt={"pastor Mrs sillo"} className="silloM" />
+        </StyledPicGroup>
       </div>
       <div style={contentStyle} className="carou2">
         <div>
@@ -44,8 +72,8 @@ const Hero = () => {
             <br />
           </h3>
         </div>
-        <img src={PsSillo} alt={"pastor sillo"} className="sillo" />
-        <img src={MsSillo} alt={"pastor Mrs sillo"} className="silloM" />
+        {/* <img src={PsSillo} alt={"pastor sillo"} className="sillo" />
+        <img src={MsSillo} alt={"pastor Mrs sillo"} className="silloM" /> */}
       </div>
       {/* <div style={contentStyle} className="carou3">
         <h3>3</h3>
