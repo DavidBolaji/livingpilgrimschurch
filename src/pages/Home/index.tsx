@@ -8,7 +8,7 @@ import Gallery from "../../components/Gallery";
 import Header from "../../components/Header/Header";
 import HelpLine from "../../components/HelpLine";
 import Hero from "../../components/Hero/Hero";
-import Testimony from "../../components/Testimony/Testimony";
+// import Testimony from "../../components/Testimony/Testimony";
 import Video from "../../components/VideoCard/Video";
 // import AOS from "aos";
 
@@ -55,7 +55,7 @@ const Home = () => {
         <Gallery />
         <Counselling />
         <Video />
-        <Testimony />
+        {/* <Testimony /> */}
         <Footer />
         {/* <Button type="primary">Submit</Button> */}
       </div>

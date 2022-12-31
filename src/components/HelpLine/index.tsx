@@ -68,6 +68,10 @@ export const StyledDrawer = styled(Drawer)`
     font-family: oswald;
   }
 
+  button:disabled {
+    color: #00a359;
+  }
+
   ul > li {
     color: #fff;
     margin-bottom: 10px;
@@ -197,13 +201,14 @@ const HelpLine = () => {
                       confirm payment
                     </Checkbox>
                   ) : (
-                    <Tooltip title="fill all box to activate this feild">
+                    <Tooltip title="fill all box to activate this feild" color="blue">
                       <Checkbox
-                        style={{ color: "white" }}
                         // onChange={handleSubmit}
                         disabled
                       >
-                        confirm payment
+                        <span style={{color: "#fff"}}>
+                          tick to accept  
+                        </span>
                       </Checkbox>
                     </Tooltip>
                   )}
@@ -234,8 +239,8 @@ const HelpLine = () => {
           2. Transfer to the following Accounts
         </p>
         <ul>
-          <li>Account No: 04040640000455 Bank: UBA</li>
-          <li>Account No: 841929440110 Bank: GTB</li>
+          <li>Account No: 20700564 Bank: UBA</li>
+          {/* <li>Account No: 841929440110 Bank: GTB</li> */}
           <li>Account No: 1012722623 Bank: Zenith</li>
         </ul>
       </StyledDrawer>

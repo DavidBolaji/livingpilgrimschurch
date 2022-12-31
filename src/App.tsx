@@ -6,11 +6,11 @@ import Home from "./pages/Home";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 import "animate.css";
-import Aos from "aos";
+import AOS from "aos";
 
 const App: React.FC = () => {
   React.useEffect(() => {
-    Aos.init({
+    AOS.init({
       delay: 100,
       easing: "ease-in-cubic",
       once: false,

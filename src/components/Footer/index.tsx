@@ -38,10 +38,22 @@ const programData = [
     time: "5:00pm-6:00pm",
   },
   {
+    id: "p5",
+    day: "1st Thursday",
+    event: "House Fellowship",
+    time: "6:00pm-7:00pm",
+  },
+  {
     id: "p3",
     day: "Thursday",
     event: "Bible Study",
-    time: "5:00pm-6:00pm",
+    time: "5:00pm-6:30pm",
+  },
+  {
+    id: "p4",
+    day: "3rd Saturday",
+    event: "Divine Intervention",
+    time: "8:00am-12:00pm",
   },
 ];
 
