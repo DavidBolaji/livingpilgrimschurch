@@ -140,8 +140,12 @@ const About = () => {
               justifyContent: "center",
             }}
           >
-            <FaFacebook size={30} />
-            <HiMail size={30} />
+            <a href="https://web.facebook.com/groups/1738779312927774">
+              <FaFacebook size={30} />
+            </a>
+            <a href="mailto:pasilloma@gmail.com">
+              <HiMail size={30} />
+            </a>
             <FaYoutube size={30} />
           </Space>
         }

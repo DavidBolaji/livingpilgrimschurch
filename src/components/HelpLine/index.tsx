@@ -201,14 +201,15 @@ const HelpLine = () => {
                       confirm payment
                     </Checkbox>
                   ) : (
-                    <Tooltip title="fill all box to activate this feild" color="blue">
+                    <Tooltip
+                      title="fill all box to activate this feild"
+                      color="blue"
+                    >
                       <Checkbox
                         // onChange={handleSubmit}
                         disabled
                       >
-                        <span style={{color: "#fff"}}>
-                          tick to accept  
-                        </span>
+                        <span style={{ color: "#fff" }}>tick to accept</span>
                       </Checkbox>
                     </Tooltip>
                   )}

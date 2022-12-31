@@ -26,7 +26,6 @@ const StyledPicGroup = styled.div`
   img {
     width: 35%;
     height: 35%;
-
   }
 
   @media (max-width: 768px) {
@@ -55,8 +54,8 @@ const Hero = () => {
           </h3>
         </div>
         <StyledPicGroup className="group">
-        <img src={PsSillo} alt={"pastor sillo"} className="sillo" />
-        <img src={MsSillo} alt={"pastor Mrs sillo"} className="silloM" />
+          <img src={PsSillo} alt={"pastor sillo"} className="sillo" />
+          <img src={MsSillo} alt={"pastor Mrs sillo"} className="silloM" />
         </StyledPicGroup>
       </div>
       <div style={contentStyle} className="carou2">

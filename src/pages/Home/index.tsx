@@ -19,7 +19,10 @@ const Home = () => {
         {/* <title>David - Full-Stack Developer</title> */}
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta name="author" content="Living Pilgrims Pentecostal Ministry" />
-        <meta name="keywords" content="Living Pilgrims Pentecostal Minstry church" />
+        <meta
+          name="keywords"
+          content="Living Pilgrims Pentecostal Minstry church"
+        />
         {/* <link rel="icon" href="./assets/images/dav.jpg" /> */}
         <meta
           name="description"

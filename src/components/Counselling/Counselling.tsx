@@ -43,11 +43,10 @@ const StyledAboutRight = styled.div`
     margin-top: 0px;
     width: 100%;
 
-
     h3 {
       /* max-width: 300px; */
       text-align: center;
-      /* font-size: 12px; */    
+      /* font-size: 12px; */
       margin: auto;
       margin-bottom: 20px;
     }
