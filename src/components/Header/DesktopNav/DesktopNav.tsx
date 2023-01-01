@@ -94,7 +94,7 @@ const DesktopNav = () => {
               : "Messages"}
           </a>
         </li>
-        <li
+        {/* <li
           className={active === "Testimony" ? "green" : ""}
           onClick={() => setActive("Testimony")}
           onMouseEnter={() => handleMouse("Testimony")}
@@ -103,7 +103,7 @@ const DesktopNav = () => {
           <a href="/#Testimony">
             {current === "Tesimony" ? "Testimony" : "Testimony"}
           </a>
-        </li>
+        </li> */}
       </ul>
     </StyledNav>
   );

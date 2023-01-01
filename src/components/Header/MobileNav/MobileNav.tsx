@@ -40,11 +40,11 @@ const navData = [
     text: "Videos",
     link: "/#Messages",
   },
-  {
-    id: "n7",
-    text: "Testimonies",
-    link: "/#Testimony",
-  },
+  // {
+  //   id: "n7",
+  //   text: "Testimonies",
+  //   link: "/#Testimony",
+  // },
   // {
   //   id: "n2",
   //   text: "Branches",

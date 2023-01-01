@@ -41,7 +41,7 @@ const programData = [
     id: "p5",
     day: "1st Thursday",
     event: "House Fellowship",
-    time: "6:00pm-7:00pm",
+    time: "5:30pm-7:30pm",
   },
   {
     id: "p3",
@@ -53,7 +53,7 @@ const programData = [
     id: "p4",
     day: "3rd Saturday",
     event: "Divine Intervention",
-    time: "8:00am-12:00pm",
+    time: "8:00am-10:00am",
   },
 ];
 

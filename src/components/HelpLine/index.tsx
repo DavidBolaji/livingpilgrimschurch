@@ -113,7 +113,7 @@ const HelpLine = () => {
             <TbPhoneCalling />{" "}
           </div>
           <div className="helpline-left-text">
-            <a href="+2348034531420">(+234) 803 453 1420</a>
+            <a href="tel:+2348034531420">(+234) 803 453 1420</a>
           </div>
         </div>
         <div className="helpline-caret">
