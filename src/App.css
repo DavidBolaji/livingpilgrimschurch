@@ -37,7 +37,7 @@ span {
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  padding-top: 8vh;
+  /* padding-top: 8vh; */
 }
 
 nav {
@@ -169,4 +169,18 @@ nav ul li:hover {
     top: -40px;
     /* z-index: 10; */
   }
+}
+
+:where(.css-dev-only-do-not-override-ws90ye).ant-image-preview-root
+  .ant-image-preview-wrap {
+  position: fixed;
+  top: 0;
+  inset-inline-end: 0;
+  bottom: 25%;
+  inset-inline-start: 0;
+  overflow: auto;
+  outline: 0;
+  -webkit-overflow-scrolling: touch;
+  left: calc(150px + 100vw - 1024px) !important;
+  right: calc(150px + 100vw - 1024px) !important;
 }

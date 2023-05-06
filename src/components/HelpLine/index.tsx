@@ -1,20 +1,20 @@
-import styled from "@emotion/styled";
-import { Checkbox, Drawer, Form, Tooltip } from "antd";
-import { Field, Formik } from "formik";
-import React, { useRef, useState } from "react";
-import { GiWallet } from "react-icons/gi";
-import { RxCaretRight } from "react-icons/rx";
-import { TbPhoneCalling } from "react-icons/tb";
-import { usePaystackPayment } from "react-paystack";
-import { toast } from "react-toastify";
-import { AntInput } from "../Form/controls/FormControls";
+import styled from '@emotion/styled';
+import { Checkbox, Drawer, Form, Tooltip } from 'antd';
+import { Field, Formik } from 'formik';
+import React, { useRef, useState } from 'react';
+import { GiWallet } from 'react-icons/gi';
+import { RxCaretRight } from 'react-icons/rx';
+import { TbPhoneCalling } from 'react-icons/tb';
+import { usePaystackPayment } from 'react-paystack';
+import { toast } from 'react-toastify';
+import { AntInput } from '../Form/controls/FormControls';
 import {
   isRequired,
   validateEmail,
   validateName,
-} from "../Form/validate/validate";
+} from '../Form/validate/validate';
 
-import "./index.css";
+import './index.css';
 
 export const StyledDrawer = styled(Drawer)`
   background-color: #0a2540 !important;
@@ -46,7 +46,7 @@ export const StyledDrawer = styled(Drawer)`
     margin-bottom: 15px;
 
     &:after {
-      content: "";
+      content: '';
       width: 20%;
       height: 3px;
       text-align: center;
@@ -87,7 +87,7 @@ const HelpLine = () => {
     values: any,
     { resetForm }: { resetForm: (val: any) => void }
   ) => {
-    toast("hi");
+    toast('hi');
     setShowPayBtn((prev) => !prev);
     ref!.current!.click();
     // setOpen(false)
@@ -99,7 +99,7 @@ const HelpLine = () => {
       <div className="helpline-give-card" onClick={() => setOpen(true)}>
         <div className="helpline-left">
           <div className="helpline-left-icon">
-            <GiWallet />{" "}
+            <GiWallet />{' '}
           </div>
           <div className="helpline-left-text">give</div>
         </div>
@@ -110,7 +110,7 @@ const HelpLine = () => {
       <div className="helpline-give-card">
         <div className="helpline-left">
           <div className="helpline-left-icon">
-            <TbPhoneCalling />{" "}
+            <TbPhoneCalling />{' '}
           </div>
           <div className="helpline-left-text">
             <a href="tel:+2348037130048">(+234) 803 713 0048</a>
@@ -123,14 +123,14 @@ const HelpLine = () => {
       <StyledDrawer open={open} onClose={() => setOpen(false)}>
         <h3>online giving</h3>
         <p>Select your preferred payment method below to make your giving.</p>
-        <p style={{ textAlign: "left" }}>1. Pay online</p>
+        <p style={{ textAlign: 'left' }}>1. Pay online</p>
         <Formik
           onSubmit={handleSubmit}
           initialValues={{
-            email: "",
-            fname: "",
-            lname: "",
-            amount: "",
+            email: '',
+            fname: '',
+            lname: '',
+            amount: '',
           }}
         >
           {({
@@ -185,9 +185,9 @@ const HelpLine = () => {
 
                 <div
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
                   }}
                 >
                   {values.email &&
@@ -195,7 +195,7 @@ const HelpLine = () => {
                   values.fname &&
                   values.lname ? (
                     <Checkbox
-                      style={{ color: "white" }}
+                      style={{ color: 'white' }}
                       onChange={handleSubmit}
                     >
                       confirm payment
@@ -209,12 +209,12 @@ const HelpLine = () => {
                         // onChange={handleSubmit}
                         disabled
                       >
-                        <span style={{ color: "#fff" }}>tick to accept</span>
+                        <span style={{ color: '#fff' }}>tick to accept</span>
                       </Checkbox>
                     </Tooltip>
                   )}
                   <button
-                    style={{ display: "none" }}
+                    style={{ display: 'none' }}
                     ref={ref}
                     className="stylebtn"
                     type="submit"
@@ -236,11 +236,11 @@ const HelpLine = () => {
           )}
         </Formik>
 
-        <p style={{ textAlign: "left", marginTop: 20 }}>
+        <p style={{ textAlign: 'left', marginTop: 20 }}>
           2. Transfer to the following Accounts
         </p>
         <ul>
-          <li>Account No: 20700564 Bank: UBA</li>
+          <li>Account No: 2033700564 Bank: UBA</li>
           {/* <li>Account No: 841929440110 Bank: GTB</li> */}
           <li>Account No: 1012722623 Bank: Zenith</li>
         </ul>
@@ -266,8 +266,8 @@ const RenderPayment = ({
 }) => {
   const [config, setConfig] = useState<any>({
     reference: new Date().getTime().toString(),
-    email: "",
-    amount: "", //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
+    email: '',
+    amount: '', //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
     publicKey: process.env.REACT_APP_PUBLIC_KEY_PAYSTACK,
   });
   const initializePayment = usePaystackPayment(config);
@@ -289,15 +289,15 @@ const RenderPayment = ({
     setActive();
     close();
     toast.error(
-      "Something went wrong, please try a different means of transfer"
+      'Something went wrong, please try a different means of transfer'
     );
   };
   return (
     <div>
       {!active ? (
-        <Tooltip title={"fill all boxes to submit"}>
+        <Tooltip title={'fill all boxes to submit'}>
           <button
-            style={{ backgroundColor: "#ededed", cursor: "not-allowed" }}
+            style={{ backgroundColor: '#ededed', cursor: 'not-allowed' }}
             onClick={() => {
               // initializePayment(() => {alert('success')}, onClose)
             }}
@@ -310,7 +310,7 @@ const RenderPayment = ({
         <button
           onClick={() => {
             initializePayment(() => {
-              toast.success("Payment successful, God bless you");
+              toast.success('Payment successful, God bless you');
               resetField();
               setActive();
               close();
