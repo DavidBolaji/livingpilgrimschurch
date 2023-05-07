@@ -29,8 +29,8 @@ const useFetch = () => {
 
       try {
         const req = await request(path, obj);
-        console.log(req);
-        if (req.statusText === "OK") {
+        // console.log(req);
+        if (req.status === 200) {
           setData(req.data);
           setSuccess(true);
           setLoading((prev) => !prev);
