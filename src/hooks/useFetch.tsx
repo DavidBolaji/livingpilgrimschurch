@@ -22,21 +22,21 @@ const useFetch = () => {
 
   const makeRequest = useCallback(
     async (request: any, path: string, obj: any) => {
-      setId(obj.id);
+      setId(obj?.id);
       setLoading(true);
       setCount((prev) => prev + 1);
       const parsed: any = queryString.parse(path);
 
       try {
         const req = await request(path, obj);
-
+        console.log(req.statusText);
         if (req.statusText === "OK") {
           setData(req.data);
           setSuccess(true);
           setLoading((prev) => !prev);
-          setPageSize(parsed.pageSize);
-          setCurrentPage(parsed.page);
-          setTotal(req.data.length);
+          setPageSize(parsed?.pageSize);
+          setCurrentPage(parsed?.page);
+          setTotal(req?.data?.length);
           return;
         }
         throw new Error();
