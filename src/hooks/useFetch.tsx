@@ -29,7 +29,7 @@ const useFetch = () => {
 
       try {
         const req = await request(path, obj);
-        console.log(req.statusText);
+        console.log(req);
         if (req.statusText === "OK") {
           setData(req.data);
           setSuccess(true);
