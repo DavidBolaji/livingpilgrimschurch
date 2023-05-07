@@ -5,6 +5,7 @@ import useFetch from "../../hooks/useFetch";
 import { useEffect, useCallback } from "react";
 import https from "../../api/http";
 import { IImage, images } from "./Data";
+import { message } from "antd";
 
 interface IGallery {
   _id: string;
@@ -13,7 +14,7 @@ interface IGallery {
 }
 
 const Gallery = () => {
-  const { data, action } = useFetch();
+  const { errorMessage, error, data, action, success } = useFetch();
 
   const fetch = useCallback(() => {
     action({
@@ -29,9 +30,15 @@ const Gallery = () => {
     //eslint-disable-next-line
   }, []);
 
-  // if (error) {
-  //   message.error("Error fetching images: " + errorMessage);
-  // }
+  useEffect(() => {
+    if (error) {
+      message.error("Error fetching images: " + errorMessage);
+    }
+
+    if (success) {
+      message.success("fetch succesfull ");
+    }
+  }, [error, errorMessage, success]);
 
   if (data) {
     const newData: IGallery[] = data.data;
@@ -44,7 +51,7 @@ const Gallery = () => {
     return (
       <Layout heading={"Gallery"} bg={"#fff"} id={"Gallery"}>
         <div className="gallery">
-          <ImageGallery autoPlay items={[...imageData, ...images]} />
+          <ImageGallery items={[...imageData, ...images]} />
         </div>
       </Layout>
     );
@@ -53,7 +60,7 @@ const Gallery = () => {
   return (
     <Layout heading={"Gallery"} bg={"#fff"} id={"Gallery"}>
       <div className="gallery">
-        <ImageGallery autoPlay items={images} />
+        <ImageGallery items={images} />
       </div>
     </Layout>
   );

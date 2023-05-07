@@ -42,12 +42,8 @@ const useFetch = () => {
         throw new Error();
       } catch (err: any) {
         setError(true);
-        if (axios.isAxiosError(err)) {
-          setErrorMessage("error message: " + err.message);
-        } else {
-          console.log(err);
-          setErrorMessage("unexpected error");
-        }
+        console.log(err);
+        setErrorMessage("unexpected error");
         setLoading((prev) => !prev);
         setId(null);
       }
